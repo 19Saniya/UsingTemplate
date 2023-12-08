@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Login - Medinova{% endblock %}
+{% block content %}
+
+
+
+    <!-- Login Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="mb-4">
+                        <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Login</h5>
+                        <h1 class="display-4">Get Logged in and get access to more facilities</h1>
+                    </div>
+                    <p class="mb-5">Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd ipsum. Dolor ea et dolore et at sea ea at dolor, justo ipsum duo rebum sea invidunt voluptua. Eos vero eos vero ea et dolore eirmod et. Dolores diam duo invidunt lorem. Elitr ut dolores magna sit. Sea dolore sanctus sed et. Takimata takimata sanctus sed.</p>
+                    <a class="btn btn-primary rounded-pill py-3 px-5 me-3" href="{% url 'team' %}">Find Doctor</a>
+                    <a class="btn btn-outline-primary rounded-pill py-3 px-5" href="">Read More</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-light text-center rounded p-5 form-group" >
+                        <h1 class="mb-4">Login For An Appointment</h1>
+                        <form action="{% url 'login_page' %}" method="post">
+                            {% csrf_token %}
+                            {% if messages %}
+                            {{ message.tags }}
+                                <div class="alert alert-primary" role="alert">
+                                    {% for message in messages %}
+                                    {{ message }}
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                                  <div class="mb-3">
+                                    <label for="" class="form-label">User Name</label>
+                                    <input type="text" class="form-control" id="" name="username" aria-describedby="emailHelp">
+                                  </div>
+                                  <div class="mb-3">
+                                    <label for="pwd1" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="pwd1" name="password">
+                                  </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" type="submit" value="login">Login</button>
+                                </div><br/>
+                                <div>
+                                    <p>Don't have an account?<a href="{% url 'register' %}">Register</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Login End -->
+
+
+    {% endblock %}

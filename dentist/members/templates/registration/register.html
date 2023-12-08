@@ -1,0 +1,83 @@
+<!--{% extends 'base.html' %}-->
+<!--{% load static %}-->
+<!--{% block title %}Register - Medinova{% endblock %}-->
+<!--{% block content %}-->
+
+
+
+<!--    &lt;!&ndash; Register Start &ndash;&gt;-->
+<!--    <div class="container-fluid py-5">-->
+<!--        <div class="container">-->
+<!--            <div class="row gx-5">-->
+<!--                <div class="col-lg-6 mb-5 mb-lg-0">-->
+<!--                    <div class="mb-4">-->
+<!--                        <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Register</h5>-->
+<!--                        <h1 class="display-4">Register and connect with us</h1>-->
+<!--                    </div>-->
+<!--                    <p class="mb-5">Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd ipsum. Dolor ea et dolore et at sea ea at dolor, justo ipsum duo rebum sea invidunt voluptua. Eos vero eos vero ea et dolore eirmod et. Dolores diam duo invidunt lorem. Elitr ut dolores magna sit. Sea dolore sanctus sed et. Takimata takimata sanctus sed.</p>-->
+<!--                    <a class="btn btn-primary rounded-pill py-3 px-5 me-3" href="{% url 'team' %}">Find Doctor</a>-->
+<!--                    <a class="btn btn-outline-primary rounded-pill py-3 px-5" href="">Read More</a>-->
+<!--                </div>-->
+<!--                <div class="col-lg-6">-->
+<!--                    <div class="bg-light text-center rounded p-5 form-group">-->
+<!--                        <h1 class="mb-4">Register For An Appointment</h1>-->
+<!--                        <form action="{% url 'login' %}" method="post">-->
+<!--                            {% csrf_token %}-->
+<!--                                {{ form }}-->
+<!--&lt;!&ndash;                            <div class="row g-3">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="col-12 col-sm-6">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <select class="form-select bg-white border-0" name="appoint_department" style="height: 55px;">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <option selected>Choose Department</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <option value="1">Department 1</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <option value="2">Department 2</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <option value="3">Department 3</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </select>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="col-12 col-sm-6">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <select class="form-select bg-white border-0" name="appoint_doctor" style="height: 55px;">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <option selected>Select Doctor</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <option value="1">Doctor 1</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <option value="2">Doctor 2</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <option value="3">Doctor 3</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </select>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="col-12 col-sm-6">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <input type="text" name="appoint_name" class="form-control bg-white border-0" placeholder="Your Name" style="height: 55px;">&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="col-12 col-sm-6">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <input type="email" name="appoint_email" class="form-control bg-white border-0" placeholder="Your Email" style="height: 55px;">&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="col-12 col-sm-6">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <div class="date" id="date" data-target-input="nearest">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <input type="text" name="appoint_date"&ndash;&gt;-->
+<!--&lt;!&ndash;                                            class="form-control bg-white border-0 datetimepicker-input"&ndash;&gt;-->
+<!--&lt;!&ndash;                                            placeholder="Date" data-target="#date" data-toggle="datetimepicker" style="height: 55px;">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="col-12 col-sm-6">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <div class="time" id="time" data-target-input="nearest">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <input type="text" name="appoint_time"&ndash;&gt;-->
+<!--&lt;!&ndash;                                            class="form-control bg-white border-0 datetimepicker-input"&ndash;&gt;-->
+<!--&lt;!&ndash;                                            placeholder="Time" data-target="#time" data-toggle="datetimepicker" style="height: 55px;">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--                                <br/><br/>-->
+<!--                                <div class="col-12">-->
+<!--                                    <button class="btn btn-primary w-100 py-3" type="submit">Register</button>-->
+<!--                                </div><br/>-->
+<!--                                    <div style="color:red">-->
+<!--                                        {{ form.errors }}-->
+<!--                                    </div>-->
+<!--                                <div>-->
+<!--                                    <p>Already have an account?<a href="{% url 'login' %}">Login</a></p>-->
+<!--                            </div>-->
+<!--                        </form>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    &lt;!&ndash; Register End &ndash;&gt;-->
+
+
+<!--    {% endblock %}-->
